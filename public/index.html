@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index">
+    <title>MatchFX • Filter Now</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="img/logo.png" type="image/png">
+</head>
+<body>
+    <div id="contents">
+        <div class="container">
+            <header>
+                <a href="landingpage.html" title="filternow"><img src="img/photo.png" alt="#" width="50px" height="50px"><h1>FilterNow!</h1></a>
+            </header>
+            <main>
+                <section id="shuffle-button-container">
+                    <button id="shuffle-button-top">Shuffle</button>
+                    <button id="filter-button">Filter</button>
+                    <img src="img/loading.gif" alt="..." id="loading-image" width="40px" height="40px" style="margin-left: 5px; display: none;">
+                </section>
+                <section id="filter-container">
+                    <div class="filter-years-container">
+                        <p class="filter-heading">Years</p>
+                        <div class="filter-years-input-container">
+                            <input type="number" id="years-from-input" min="1900" max="2100" step="1">
+                            <p>to</p>
+                            <input type="number" id="years-to-input" min="1900" max="2100" step="1">
+                        </div>
+                    </div>
+                    <div class="filter-rating-container">
+                        <p class="filter-heading">Rating above</p>
+                        <input type="number" id="rating-input" min="0" max="10" step="1">
+                    </div>
+                    <div class="filter-popular-container">
+                        <p class="filter-heading">Show mostly popular</p>
+                        <div class="filter-popular-items-container">
+                            <div class="filter-popular-item">
+                                <p>Yes</p>
+                                <input type="radio" id="popular-yes-input" name="popular" value="yes" checked="true"> 
+                            </div>
+                            <div class="filter-popular-item">
+                                <p>No</p>
+                                <input type="radio" id="popular-no-input" name="popular" value="no"> 
+                            </div>
+                        </div>
+                    </div>
+                    <div class="filter-genres-container">
+                        <p class="filter-heading">Genres</p>
+                        <div class="filter-genre-items-container">
+                            <div class="filter-genre-item"><p>All</p><input type="radio" name="genre" id="all" value="all" checked="true"></div>
+                            <div class="filter-genre-item"><p>Action</p><input type="radio" name="genre" id="action" value="action"></div>
+                            <div class="filter-genre-item"><p>Adventure</p><input type="radio" name="genre" id="adventure" value="adventure"></div>
+                            <div class="filter-genre-item"><p>Animation</p><input type="radio" name="genre" id="animation" value="animation"></div>
+                            <div class="filter-genre-item"><p>Comedy</p><input type="radio" name="genre" id="comedy" value="comedy"></div>
+                            <div class="filter-genre-item"><p>Crime</p><input type="radio" name="genre" id="crime" value="crime"></div>
+                            <div class="filter-genre-item"><p>Documentry</p><input type="radio" name="genre" id="documentry" value="documentry"></div>
+                            <div class="filter-genre-item"><p>Drama</p><input type="radio" name="genre" id="drama" value="drama"></div>
+                            <div class="filter-genre-item"><p>Family</p><input type="radio" name="genre" id="family" value="family"></div>
+                            <div class="filter-genre-item"><p>Fantasy</p><input type="radio" name="genre" id="fantasy" value="fantasy"></div>
+                            <div class="filter-genre-item"><p>History</p><input type="radio" name="genre" id="history" value="history"></div>
+                            <div class="filter-genre-item"><p>Horror</p><input type="radio" name="genre" id="horror" value="horror"></div>
+                            <div class="filter-genre-item"><p>Music</p><input type="radio" name="genre" id="music" value="music"></div>
+                            <div class="filter-genre-item"><p>Mystery</p><input type="radio" name="genre" id="mystery" value="mystery"></div>
+                            <div class="filter-genre-item"><p>Romance</p><input type="radio" name="genre" id="romance" value="romance"></div>
+                            <div class="filter-genre-item"><p>Sci Fi</p><input type="radio" name="genre" id="scifi" value="scifi"></div>
+                            <div class="filter-genre-item"><p>TV Movie</p><input type="radio" name="genre" id="tvmovie" value="tvmovie"></div>
+                            <div class="filter-genre-item"><p>Thriller</p><input type="radio" name="genre" id="thriller" value="thriller"></div>
+                            <div class="filter-genre-item"><p>War</p><input type="radio" name="genre" id="war" value="war"></div>
+                            <div class="filter-genre-item"><p>Western</p><input type="radio" name="genre" id="western" value="werstern"></div>
+                        </div>
+                    </div>
+                    <div class="filter-buttons-container">
+                        <button id="apply-button">Apply</button>
+                        <button id="reset-button">Reset</button>
+                    </div>
+                </section>
+                <section id="movie-details-container">
+                    <div class="movie-image-container"></div>
+                    <div class="movie-title-container" title="Google the movie"><h2>Movie Title</h2></div>
+                    <div class="movie-subdetails-container">
+                        <p class="movie-year">Year</p>
+                        <p class="movie-rating">Rating</p>
+                        <p class="movie-duration">0h 0m</p>
+                        <p class="movie-trailer" style="display:none">See Trailer</p>
+                    </div>
+                    <div class="movie-genres-container">
+                        <div class="genres-heading-container"><h3>Genres</h3></div>
+                        <div class="genres-container">
+                            <p class="genre">Genre 1</p>
+                            <p class="genre">Genre 2</p>
+                            <p class="genre">Genre 3</p>
+                        </div>
+                    </div>
+                    <div class="movie-description-container">
+                        Movie description.
+                    </div>
+                </section>
+                <section id="shuffle-button-container">
+                    <button id="shuffle-button-bottom">Shuffle</button>
+                </section>
+            </main>
+        </div>
+    </div>
+
+    <script defer src="main.js"></script>
+</body>
+</html>
